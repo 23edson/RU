@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="pt-br" xml:lang="pt-br">
+<head>
+       <link rel="stylesheet" type="text/css" href="tela.css" />
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cardápio Online Restaurante Universitário - Universidade Federal da Fronteira Sul</title>
+    <link rel="shortcut icon"
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" /><script id="firstthemesheet" type="text/css">
+<script type="text/javascript">
+$('input[type="submit"]').mousedown(function(){
+  $(this).css('background', '#2ecc71');
+});
+$('input[type="submit"]').mouseup(function(){
+  $(this).css('background', '#1abc9c');
+});
+
+$('#loginform').click(function(){
+  $('.login').fadeToggle('slow');
+  $(this).toggleClass('green');
+});
+
+
+
+$(document).mouseup(function (e)
+{
+    var container = $(".login");
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.hide();
+        $('#loginform').removeClass('green');
+    }
+}); </script>
+</script>
+
+<meta name="robots" content="noindex" />    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-login-index">
+
+<div class="skiplinks">
+
+<header role="banner" class="navbar navbar-fixed-top navbar-inverse moodle-has-zindex" body style="background:#228B22">
+        <div class="container-fluid">
+	     
+            <img src="http://uffs.edu.br/images/identidadevisual/Chapeco/IdentidadeVisual_Campus_Chapec_Colorida_para_fundos_Escuros.png" width="100" height="120" alt="Logo UFFS" title="Logo Universidade Federal da Fronteira Sul" /></div></header>
+                    
+      <h2><a href="#" id="loginform">Login</a></h2>
+    <div class="login">
+      <div class="arrow-up"></div>
+      <div class="formholder">
+        <div class="randompad">
+           <fieldset>
+             <label name="email">Email</label>
+             <input type="email" value="example@example.com" />
+             <label name="password">Password</label>
+             <input type="password" />
+             <input type="submit" value="Login" />
+ 
+           </fieldset>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+                                <ul class="nav pull-right"></header><header>
+                                	<br>
+                                	<h2 style="text-align:center;">Cardápio Online Restaurante Universitário - Universidade Federal da Fronteira Sul
+                                    </h2>
+<br><br>
+                        <table align='center' border="2" 
+cellpadding="10">
+<tr><center>
+<th> Segunda-feira</th>
+<th>Terça-feira</th>
+<th>Quarta-feira</th>
+<th>Quinta-feira</th>
+<th>Sexta-feira</th></center>
+</tr>
+
+<tr>
+<td > SALADA </td>
+<td>linha 1, célula 2</td><td>linha 1, célula 2</td><td>linha 1, célula 2</td><td>linha 1, célula 2</td></tr>
+
+<tr>
+<td>linha 1, célula 1</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+</tr>
+
+<tr>
+<td>linha 1, célula 1</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+</tr>
+
+<tr>
+<td>linha 1, célula 1</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+</tr>
+
+<tr>
+<td>linha 1, célula 1</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+</tr>
+
+<tr>
+<td>linha 1, célula 1</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+</tr>
+
+<tr>
+<td>linha 1, célula 1</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+</tr>
+
+<tr>
+<td>linha 1, célula 1</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+</tr>
+
+<tr>
+<td>linha 1, célula 1</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+<td>linha 1, célula 2</td>
+</tr>
+
+
+
+</table>        		
+
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+</header>
+
+
+        <div id="course-footer"></div>
+    
+        <div class="footnote text-center"><div class="text_to_html"><p style="text-align:center;"><b>
+        	<br><br>
+        	
+        	<br>
+        	
+        	<img id="comida" src="comida.jpg" width="400" height="120"  alt="Logo UFFS" title="Logo Universidade Federal da Fronteira Sul"/>
+</style
+</body>
+</html>
+
