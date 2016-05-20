@@ -4,7 +4,8 @@ $banco = Conectar();
 
   session_start();
    if(isset($_SESSION['op']) and $_SESSION['op'] == 1){
-  
+  $conecta = mysql_connect("localhost", "root", "") or print (mysql_error());
+  mysql_select_db("RU", $conecta) or print(mysql_error());
 ?>
 
 <!DOCTYPE html>
@@ -30,40 +31,10 @@ $banco = Conectar();
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="robots" content="noindex" />    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript">
-		$(function(){
-    		$("#form1").submit(function(){
-        
-        var valid=0;
-        $(this).find('input[type=text]').each(function(){
-            if($(this).val() != "") valid+=1;
-        });
-
-        if(valid){
-            //document.getElementById('fsub1').disabled = false;
-				//$("#submit").removeAttr('disabled');
-				 $("#tes").hide();      
-            return true;
-        }
-        else {
-           // document.getElementById('fsub1').disabled = true;
-            $("#tes").css("color", "red").show();
-            return false;
-        }
-    });
-});
-	</script>	
-	
-	
-	
-	
-	<script type="text/javascript">
 		$(document).ready(function() {
     		$('#example').DataTable();
 		} );
-		
-		
 	</script>
-	
 </head>
 
 <body  id="page-login-index">
@@ -81,7 +52,6 @@ $banco = Conectar();
 
 	<br>
 	<div class="table-reponsive">
-	 <form id="form1" action="editp.php" method="post" enctype="multipart/form-data">
 	<table id="example" class="display table" width="100%">
 		<thead>
             <tr>
@@ -100,26 +70,23 @@ $banco = Conectar();
             </tr>
         </tfoot>
         <tbody>
-				 
+				  <form action="editp.php" method="post" enctype="multipart/form-data">
 					<?php
 
-							$query = "Select id,nome,tipo from Pratos order by id";
+							$query = "Select nome,tipo from Pratos order by 1";
 							$result = mysqli_query($banco, $query);
 							if($result){
 								if(mysqli_num_rows($result)>0){
 										//$consulta = mysqli_fetch_array($result,MYSQLI_ASSOC);
-										
+										$j = 0;
 
 										while($row = $result->fetch_assoc()) {
 											echo "<tr>
 															<td>" . $row['nome'] . "</td>" .
-															"<td><input type='text' id='i" . $row['id'] ."' name='i".$row['id']."'  /></td>" .
+															"<td><input id='inputn" . $j++ ."' required='true' /></td>" .
 															"<td>" . $row['tipo'] . "</td>" .
-															"<td><input type='text' id='n" . $row['id'] . "' name='n".$row['id']."'   /></td>
-																												
-													</tr>";
+															"<td><input id='inputt" . $j++ . "' required='true' /></td></tr>";
 
-																				
 										}
 
 								}
@@ -130,13 +97,10 @@ $banco = Conectar();
 							}
 
 						?>
-				 
+				  <input class="btn btn-success" type="submit" value="Adicionar" name="fsub" id="fsub"  /> </form>
          </tbody>
 
-	</table>
-	<div id="tes" style="display:none"><p>Nada para atualizar</p></div> 
-	<div style="position:relative; right:-1250px"><input class="btn btn-success" type="submit" value="Adicionar" name="fsub1" id="fsub1" /> </div>
-	</form></div>
+	</table></div>
 <br><br><br><br>
 
 </body>
