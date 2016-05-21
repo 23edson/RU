@@ -34,6 +34,7 @@ $banco = Conectar();
     		$("#form1").submit(function(){
         
         var valid=0;
+	
         $(this).find('input[type=text]').each(function(){
             if($(this).val() != "") valid+=1;
         });
@@ -46,6 +47,7 @@ $banco = Conectar();
         }
         else {
            // document.getElementById('fsub1').disabled = true;
+
             $("#tes").css("color", "red").show();
             return false;
         }
@@ -88,7 +90,7 @@ $banco = Conectar();
                 <th>Nome</th>
                 <th>Editar nome</th>
 								<th>Tipo</th>
-							  <th>Editar tipo</th>
+							  
             </tr>
         </thead>
         <tfoot>
@@ -96,15 +98,15 @@ $banco = Conectar();
                 <th>Nome</th>
                 <th>Editar nome</th>
 								<th>Tipo</th>
-							  <th>Editar tipo</th>
+							  
             </tr>
         </tfoot>
         <tbody>
 				 
 					<?php
 
-							$query = "Select id,nome,tipo from Pratos order by id";
-							$result = mysqli_query($banco, $query);
+							$query = "select Pratos.id,Pratos.nome,TipoPratos.tipo from Pratos JOIN TipoPratos on Pratos.tipo = TipoPratos.id ORDER by Pratos.id;";
+							$result = mysqli_query($banco,$query);
 							if($result){
 								if(mysqli_num_rows($result)>0){
 										//$consulta = mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -115,9 +117,9 @@ $banco = Conectar();
 															<td>" . $row['nome'] . "</td>" .
 															"<td><input type='text' id='i" . $row['id'] ."' name='i".$row['id']."'  /></td>" .
 															"<td>" . $row['tipo'] . "</td>" .
-															"<td><input type='text' id='n" . $row['id'] . "' name='n".$row['id']."'   /></td>
+															
 																												
-													</tr>";
+													"</tr>";
 
 																				
 										}
@@ -135,7 +137,7 @@ $banco = Conectar();
 
 	</table>
 	<div id="tes" style="display:none"><p>Nada para atualizar</p></div> 
-	<div style="position:relative; right:-1250px"><input class="btn btn-success" type="submit" value="Adicionar" name="fsub1" id="fsub1" /> </div>
+	<div style="position:relative; right:-1250px;padding:2px"><input class="btn btn-success" type="submit" value="Adicionar" name="fsub1" id="fsub1" />   <input class="btn btn-warning" type="submit" value="Retornar" id="ret" name="ret" onClick="window.location.href = 'acesso.php'" /></div>
 	</form></div>
 <br><br><br><br>
 

@@ -36,7 +36,6 @@ if(isset($_POST['fsub1'])){
 			
 			if(isset($_POST[$str])){
 					if($_POST[$str] != ""){
-						$name = $_POST[$str];		
 						$query = "update Pratos set nome='".$name."' where id=".$i;
 						$result = mysqli_query($banco,$query);
 
