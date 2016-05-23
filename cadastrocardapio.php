@@ -72,6 +72,7 @@
 								<input type="submit" name="Submit" value="Enviar" /> <br />
 							</th>
 						</table>
+						<input type="hidden" name="Edit" id="Edit" value=0 />
 					</form>
 				</div>
         		<div class="footnote text-center"><div class="text_to_html"><p style="text-align:center;"></p></div>     
@@ -91,10 +92,8 @@
 					showButtonPanel:true,
 					dateFormat: 'dd-mm-yy'
     			});
-			});
-		
-			jQuery(document).ready(function(){
-				$("#calendario").change(function(e){
+				
+				function startD(){
 					var dados = jQuery( this ).serialize();
 					jQuery.ajax({
 						type: "POST",
@@ -103,14 +102,17 @@
 						success: function( data ){
 							$('head').append(data);
 							document.getElementById('cadCard').innerHTML = (dadosR? "Editar":"Cadastrar") + " Cardápio";
+							document.getElementById('Edit').value = (dadosR? 1 : 0);
 							if(dadosR)
 								for(var i=1; i<=9; i++)
 									$("#TipPrat"+i).val(dadosR[i-1]);			
 						}
 					});
 					return false;
-				});
+				}
+				$("#calendario").change(startD);	
 			});
+
 		</script>
 		
  <?php
