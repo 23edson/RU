@@ -34,7 +34,7 @@ $banco = Conectar();
     		$("#form1").submit(function(){
         
         var valid=0;
-	
+	var el = document.getElementById("ret");
         $(this).find('input[type=text]').each(function(){
             if($(this).val() != "") valid+=1;
         });
@@ -48,6 +48,11 @@ $banco = Conectar();
         else {
            // document.getElementById('fsub1').disabled = true;
 
+	   if (el.addEventListener) {
+    		el.addEventListener("click", function() {
+        		window.location.href = 'acesso.php';
+    		}, false);
+	    
             $("#tes").css("color", "red").show();
             return false;
         }
