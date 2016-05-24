@@ -94,7 +94,7 @@
     			});
 				
 				function startD(){
-					var dados = $("#calendario").serialize();alert(dados);
+					var dados = $("#calendario").serialize();
 					jQuery.ajax({
 						type: "POST",
 						url: "editcardapio.php",
