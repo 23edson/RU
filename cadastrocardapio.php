@@ -16,7 +16,6 @@
 		<!DOCTYPE html>
 		<html  dir="ltr" lang="pt-br" xml:lang="pt-br">
 			<head>
-				<title>Cardápio Online Restaurante Universitário - Universidade Federal da Fronteira Sul</title>
 				<meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
 				<meta name="description" content="">
 				<meta name="author" content="">

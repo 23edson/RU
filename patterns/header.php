@@ -1,6 +1,7 @@
 <?php header('Content-type: text/html; charset=ISO-8859-1'); ?>
+<title>Cardápio Online Restaurante Universitário - Universidade Federal da Fronteira Sul</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
 <div class="skiplinks">
 	<header role="banner" class="navbar navbar-fixed-top navbar-inverse moodle-has-zindex" body style="background:#228B22">
 		<div class="container-fluid">
