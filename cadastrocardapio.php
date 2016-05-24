@@ -94,7 +94,7 @@
     			});
 				
 				function startD(){
-					var dados = jQuery( this ).serialize();
+					var dados = $("#calendario").serialize();alert(dados);
 					jQuery.ajax({
 						type: "POST",
 						url: "editcardapio.php",
@@ -108,11 +108,10 @@
 									$("#TipPrat"+i).val(dadosR[i-1]);			
 						}
 					});
-					return false;
 				}
+				$(startD);
 				$("#calendario").change(startD);	
 			});
-
 		</script>
 		
  <?php
