@@ -32,7 +32,9 @@
 <!DOCTYPE html>
 <html  dir="ltr" lang="pt-br" xml:lang="pt-br">
 	<head>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="tela.css" />
+		<link rel="stylesheet" type="text/css" href="acesso.css" />
 		<meta name="generator" content="Bootply" />
 		<meta name="description" content="Example of using CSS only for masonry / isotope style layout with Bootstrap panels." />
 		<meta name="robots" content="index" />
@@ -47,6 +49,7 @@
 				fillTable();
 			?>
 		</table>
+		<br><br><br><br><br><br><br>
 		<?php require "patterns/footer.php"; ?>
 	</body>
 </html>
