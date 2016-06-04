@@ -2,15 +2,10 @@
 	session_start();
 	require 'connection.php'; 
 	$conecta = db_conecta();
-	if(!$conecta) echo "<script language='javascript'>
-       alert('fdsfds');
-    
-       </script>";
-    $login=$_POST['inputCard'];
+	$login=$_POST['inputCard'];
     $senha=$_POST['password2'];
     $num = db_select(1,"SELECT adm FROM Pessoa WHERE email = '".$login."' AND senha = '".$senha."' and adm=1");
 	
-
    if($num[0] == 1 ){ // funcionario
       $_SESSION['login'] = $_POST['inputCard'];     //gravo nome do usuário de log
       $_SESSION['op'] = 1;
@@ -20,7 +15,7 @@
 
     } else{
          echo "<script language='javascript'>
-       alert('LOGIN >".$num."< OU SENHA INVALIDOS!');
+       alert('LOGIN OU SENHA INVALIDOS!');
        javascript:history.back();
        </script>";
          $_SESSION["logou"] = 0;
