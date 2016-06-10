@@ -44,7 +44,7 @@
 			$result = mysqli_query($banco,$query);
 
 			if($result){echo 'Cadastrado com sucesso';
-		echo '<meta http-equiv="refresh" content="3;URL=acesso.php" />';}
+		echo '<meta http-equiv="refresh" content="1;URL=editprato.php" />';}
 
 		}
 
