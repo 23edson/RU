@@ -53,16 +53,22 @@
 
               <form action="connect.php" method="post" enctype="multipart/form-data">
     
-               <header><h1 id="cc" style="color: #228B22"><span>Login</span></h1></header>
+               <header><h1 id="cc" style="color: #228B22"><span>Cadastrar Creditos</span></h1></header>
 
          <p> 
-                                   <p style="color:black;"> <label for="inputCard" class="uname" data-icon="" style="text-align: center">Login</label>
+                                   <p style="color:black;"><label for="matricula" class="uname" data-icon="" style="text-align: center">Matricula</label>
                                     <input id="inputCard" name="inputCard" placeholder="" required="true"/>
+                                                      
+                                    <p style="color:black;"><label for="matricula" class="uname" data-icon="" style="text-align: center">Nome</label>
+                                    <input id="inputCard" name="inputCard" placeholder="" required="true"/>
+                                    
 
-                                    <label for="inputCard" class="uname" data-icon="" >Senha</label>
-                                    <input type="password" id="password2" name="password2"/>
+                                    <p style="color:black;"><label for="credito" class="uname" data-icon="" style="text-align: center" >Valor em dinheiro</label>
+                                    <input type="text" required="required" name="numbers" pattern="[0-9]+$" />
+                                    
+                                    
 
-                                    <input class="btn btn-success" type="submit" value="Login" name="fsub" id="fsub" /> 
+                                    <input class="btn btn-success" type="submit" value="Salvar" name="fsub" id="fsub" /> 
       
                                 </p>
         </div></div>
