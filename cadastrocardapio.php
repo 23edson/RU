@@ -24,6 +24,7 @@
 				<link rel="stylesheet" type="text/css" href="css/demo.css" />
 				<link rel="stylesheet" href="css/datepicker.css">
 				<link href="css/bootstrap.min.css" rel="stylesheet">
+				<link rel="stylesheet" type="text/css" href="acesso.css" />
 				<script src="js/jquery.min.js"></script>
 				<script src="js/bootstrap-datepicker.js"></script>
 				<?php require "patterns/header.php" ?>
@@ -48,7 +49,7 @@
 									formAddItem($i, "Pratos");
 								?> 
 								</br></br>
-								<input type="submit" name="Submit" value="Enviar" /> <br />
+								<input class="grande verde" type="submit" name="Submit" value="Enviar" /> <br />
 							</th>
 						</table>
 						<input type="hidden" name="Edit" id="Edit" value=0 />

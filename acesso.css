@@ -1,4 +1,4 @@
-button.grande {
+.grande {
    border-radius: 3px;
    -webkit-border-radius: 3px;
    -moz-border-radius: 3px;
@@ -12,7 +12,7 @@ button.grande {
    float: center;
 }
 
-button.verde {
+.verde {
    color: white;
    text-shadow: 0 -1px 0 #396715;
    background-color: #68b12f;
@@ -31,12 +31,12 @@ button.verde {
    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
 }
 
-button.verde:hover {
+.verde:hover {
    opacity:.85;
    cursor: pointer; 
 }
 
-button.verde:active {
+.verde:active {
    border: 1px solid #20911e;
    box-shadow: 0 0 10px 5px #356b0b inset; 
    -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
