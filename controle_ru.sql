@@ -1,5 +1,5 @@
 
-/*  SCRIPT SQL para o controle_ru
+/*  SCRIPT SQL para controle_ru
 *
 *
 *
