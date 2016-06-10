@@ -88,9 +88,9 @@ CREATE TABLE IF NOT EXISTS Compras (
 INSERT INTO Bilhete VALUES (0,0);
 INSERT INTO Bilhete VALUES (0,0);
 INSERT INTO Bilhete VALUES (0,0);
-INSERT INTO Pessoa VALUES (1212121002,'akan@uffs.edu.br','akan.reimos','estudante', 0, '1234', 1);
-INSERT INTO Pessoa VALUES (2244398,'juvencia@uffs.edu.br','juvencia.akal','professor', 0, '????', 2);
-INSERT INTO Pessoa VALUES (07611457404,'admin@uffs.edu.br','grandAdmin','externo', 1, '4321', 3);
+INSERT INTO Pessoa VALUES (1212121002,'akan@uffs.edu.br','akan.reimos','estudante', 0, 'd93591bdf7860e1e4ee2fca799911215', 1);
+INSERT INTO Pessoa VALUES (2244398,'juvencia@uffs.edu.br','juvencia.akal','professor', 0, 'd93591bdf7860e1e4ee2fca799911215', 2);
+INSERT INTO Pessoa VALUES (07611457404,'admin@uffs.edu.br','grandAdmin','externo', 1, 'd93591bdf7860e1e4ee2fca799911215', 3);
 INSERT INTO Ingredientes VALUES (0, 'Cenoura');
 INSERT INTO Ingredientes VALUES (0, 'Alface');
 INSERT INTO Ingredientes VALUES (0, 'Carne Moída');

@@ -36,7 +36,7 @@
                                     <a href = "cadastrocardapio.php"><button class="grande verde">Cadastrar cardápio</button> <a href = "cadastrocardapio.php"><button class="grande verde">Alterar cardápio</button></br>
                                     <a href = "cadastroPratos.php"><button class="grande verde">Cadastrar pratos</button> <a href = "editprato.php"><button class="grande verde">Alterar prato</button></br>
                                     <a href = "cadastrocredito.php"><button class="grande verde">Cadastrar créditos</button><br>
-			        <a href = "newppl.php"><button class="grande verde">Cadastrar usuário</button>
+			        <a href = "cadastrocredito.php"><button class="grande verde">Cadastrar créditos</button>
 </div>
 
 <br><br>

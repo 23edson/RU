@@ -51,31 +51,7 @@
 				}
 	</script>
 
-				<script type="text/javascript">
-		$(function(){
-    		$("#form1").submit(function(){
-        
-        var valid=0;
-	
-        $(this).find('input[type=text]').each(function(){
-            if($(this).val() != "") valid+=1;
-        });
-
-        if(valid){
-            //document.getElementById('fsub1').disabled = false;
-				//$("#submit").removeAttr('disabled');
-				 $("#tes").hide();      
-            return true;
-        }
-        else {
-           // document.getElementById('fsub1').disabled = true;
-
-            $("#tes").css("color", "red").show();
-            return false;
-        }
-    });
-});
-	</script>	
+		
 
 			
 			<meta name="robots" content="noindex" />    <meta name="viewport" content="width=device-width, initial-scale=1.0">
