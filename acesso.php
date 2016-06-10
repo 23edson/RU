@@ -33,9 +33,9 @@
                                    <h2 style="text-align:center;">Cardápio Online Restaurante Universitário - Universidade Federal da Fronteira Sul  </h2> 
                                   <br>
                                   <div style="text-align: center;">
-                                    <a href = "cadastrocardapio.php"><button class="grande verde">Cadastrar cardápio</button></br>
-                                    <a href = "cadastroPratos.php"><button class="grande verde">Cadastrar pratos</button></br></div>
-                                    
+                                    <a href = "cadastrocardapio.php"><button class="grande verde">Cadastrar cardápio</button> <a href = "cadastrocardapio.php"><button class="grande verde">Alterar cardápio</button></br>
+                                    <a href = "cadastroPratos.php"><button class="grande verde">Cadastrar pratos</button> <a href = "editprato.php"><button class="grande verde">Alterar prato</button></br>
+                                    <a href = "cadastrocredito.php"><button class="grande verde">Cadastrar créditos</button></div>
 
 <br><br>
                         
