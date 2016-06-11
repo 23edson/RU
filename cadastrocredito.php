@@ -1,3 +1,8 @@
+<?php
+	session_start();
+	require 'connection.php'; 
+	if((isset($_SESSION['op']) and $_SESSION['op'] == 1)? db_conecta() ? 1:0:0){
+?>
 <!DOCTYPE html>
 <html  dir="ltr" lang="pt-br" xml:lang="pt-br">
 <head>
@@ -50,26 +55,56 @@
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-
-              <form action="connect.php" method="post" enctype="multipart/form-data">
+<?php
+	if(!isset($_POST["matricula"])){
+?>
+              <form action="cadastrocredito.php" method="post" enctype="multipart/form-data">
     
                <header><h1 id="cc" style="color: #228B22"><span>Cadastrar Creditos</span></h1></header>
 
          <p> 
                                    <p style="color:black;"><label for="matricula" class="uname" data-icon="" style="text-align: center">Matricula</label>
-                                    <input id="inputCard" name="inputCard" placeholder="" required="true"/>
+                                    <input id="matricula" name="matricula" placeholder="" required="true"/>
+									<input class="btn btn-success" type="submit" value="Pesquisar" name="fsub" id="fsub" />
+		</form>
+<?php
+	}
+	else if(!isset($_POST["id_bilhete"])){
+?>
+		<p style="color:black;"><label for="matricula" class="uname" data-icon="" style="text-align: center">Matricula</label>
+                                    <input id="matricula" value='<?php echo $_POST["matricula"]; ?>' name="matricula" placeholder="" required="true" disabled="disabled"/>
+		<form action="cadastrocredito.php" method="post" enctype="multipart/form-data">
                                                       
                                     <p style="color:black;"><label for="matricula" class="uname" data-icon="" style="text-align: center">Nome</label>
-                                    <input id="inputCard" name="inputCard" placeholder="" required="true"/>
+<?php
+	$rows = db_select(2,'select nome, id_bilhete from Pessoa where id="'.$_POST["matricula"].'"');
+	
+?>
+                                    <input id="nome" name="nome" value='<?php echo $rows[0]; ?>' placeholder="" required="true" disabled="disabled"/>
                                     
 
                                     <p style="color:black;"><label for="credito" class="uname" data-icon="" style="text-align: center" >Valor em dinheiro</label>
-                                    <input type="text" required="required" name="numbers" pattern="[0-9]+$" />
+                                    <input type="text" required="required" id="numbers" name="numbers" pattern="[0-9]+$+." />
+									<input type="hidden" id="id_bilhete" name="id_bilhete" value='<?php echo $rows[1]; ?>' />
+									<input type="hidden" id="matricula" name="matricula" />
                                     
                                     
 
                                     <input class="btn btn-success" type="submit" value="Salvar" name="fsub" id="fsub" /> 
-      
+		</form>
+<?php
+	}
+	else{
+		$rows = db_select(1,'select valor from Bilhete where cod='.$_POST["id_bilhete"]);
+		$query = db_query('update Bilhete set valor='.($_POST["numbers"]+$rows[0]).' where cod='.$_POST["id_bilhete"]);
+		if($query)
+			echo "<script type='text/javascript' language='javascript'>
+					alert('Inserido com sucesso!'); </script>";
+		else
+			echo "<script type='text/javascript' language='javascript'>
+					alert('Problemas de inserção!'); </script>";
+	}	
+?>       
                                 </p>
         </div></div>
 
@@ -92,4 +127,11 @@
 </style>
 </body>
 </html>
+ <?php
+	}
+	else {
+  		header("Location:login.php"); 
+	}
+?>
+
 

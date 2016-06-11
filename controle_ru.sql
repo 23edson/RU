@@ -13,7 +13,7 @@ USE RU;
 
 CREATE TABLE IF NOT EXISTS Bilhete(
 	cod INT(11) NOT NULL AUTO_INCREMENT,
-	valor varchar(32) NOT NULL,
+	valor float NOT NULL,
 	CONSTRAINT bilhete_pk PRIMARY KEY (cod)
 ) ;
 
