@@ -1,7 +1,9 @@
 <?php 
 	require 'connection.php';
 	require 'functions.php';
+	require 'mostra_erros.php';
 	db_conecta();
+	
 	
 	function fillTable(){
 		$date[0] = new DateTime(date('Y-m-d H:i:s'));
@@ -13,6 +15,7 @@
 		}
 		for($i=1; $i<=5; $i++)
 			$query[$i-1] = db_select(1,'select nome from (Cardapio join PratosCardapio on cod = id_cardapio)  join Pratos on id_pratos = Pratos.id where Data="'.$date[$i-1]->format('Y-m-d').'"'); 
+			
 		echo "<tr><center>
 				<th>Segunda-feira<br/>".$date[0]->format('d/m/Y')."</th>
 				<th>Terça-feira<br/>".$date[1]->format('d/m/Y')."</th>
